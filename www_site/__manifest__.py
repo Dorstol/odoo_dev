@@ -4,28 +4,22 @@
     'version': '17.0.0.0.1',
     'category': 'Website',
     'summary': 'Educational module for Odoo website development',
-    'description': """
-        This module serves as an educational example for developing websites in Odoo.
-    """,
     'author': 'Sofronov Oleh',
     'website': 'https://github.com/Dorstol',
-    'depends': ['base',],
+    'depends': ['base', ],
     'data': [
-        # Add XML or CSV files here that contain data to be loaded when the module is installed
-        # Example:
-        # 'data/my_data.xml',
+        'security/ir.model.access.csv',
+        'views/www_site_view.xml',
     ],
     'demo': [
-        # Add demo XML or CSV files here that provide some demo data (optional)
-        # Example:
-        # 'demo/demo_data.xml',
+        'demo/www_site_demo.xml',
     ],
     'installable': True,
     'application': True,
     'auto_install': False,
     'license': 'AGPL-3',
 
-    'iamges': [
+    'images': [
         'static/description/icon.png',
     ],
 

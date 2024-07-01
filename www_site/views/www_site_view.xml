@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="www_site_view_tree" model="ir.ui.view">
+        <field name="name">www_site_view_tree</field>
+        <field name="model">www.site</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="www_site_view_form" model="ir.ui.view">
+        <field name="name">www_site_view_form</field>
+        <field name="model">www.site</field>
+        <field name="arch" type="xml">
+            <form string="www_site_form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                        <field name="date"/>
+                        <field name="yesterday"/>
+                        <field name="qty"/>
+                        <field name="partner_id"/>
+                        <field name="image" widget="image"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="www_site_action" model="ir.actions.act_window">
+        <field name="name">WWW Site</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">www.site</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="www_site_menuitem_main" name="WWW Site" sequence="200"/>
+
+    <menuitem id="www_site_menuitem_secondary"
+              name="WWW Site second"
+              parent="www_site_menuitem_main"
+              action="www_site_action" sequence="200"/>
+
+</odoo>
