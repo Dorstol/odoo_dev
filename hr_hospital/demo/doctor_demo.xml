@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Demo data for Doctors -->
+    <record id="doctor_1" model="hr.doctor">
+        <field name="full_name">Dr. Komarovskiy</field>
+        <field name="specialization">Child doctor</field>
+    </record>
+    <record id="doctor_2" model="hr.doctor">
+        <field name="full_name">Dr. Smith</field>
+        <field name="specialization">General Practitioner</field>
+    </record>
+    <record id="doctor_3" model="hr.doctor">
+        <field name="full_name">Dr. Adams</field>
+        <field name="specialization">Surgeon</field>
+    </record>
+</odoo>
