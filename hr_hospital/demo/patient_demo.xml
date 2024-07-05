@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Demo data for Diseases -->
+    <record id="hr_disease_1" model="hr.disease">
+        <field name="name">Flu</field>
+    </record>
+
+    <record id="hr_disease_2" model="hr.disease">
+        <field name="name">Diabetes</field>
+    </record>
+
+    <record id="hr_disease_3" model="hr.disease">
+        <field name="name">Hypertension</field>
+    </record>
+
+    <!-- Demo data for Patients -->
+    <record id="hr_patient_1" model="hr.patient">
+        <field name="full_name">John Doe</field>
+        <field name="age">30</field>
+        <field name="gender">male</field>
+        <field name="disease_ids" eval="[(6, 0, [ref('hr_disease_1'), ref('hr_disease_2')])]"/>
+        <field name="doctor_id" ref="doctor_1"/>
+    </record>
+
+    <record id="hr_patient_2" model="hr.patient">
+        <field name="full_name">Jane Doe</field>
+        <field name="age">25</field>
+        <field name="gender">female</field>
+        <field name="disease_ids" eval="[(6, 0, [ref('hr_disease_2')])]"/>
+        <field name="doctor_id" ref="doctor_2"/>
+    </record>
+
+    <record id="hr_patient_3" model="hr.patient">
+        <field name="full_name">Richard Roe</field>
+        <field name="age">40</field>
+        <field name="gender">male</field>
+        <field name="disease_ids" eval="[(6, 0, [ref('hr_disease_3')])]"/>
+        <field name="doctor_id" ref="doctor_3"/>
+    </record>
+</odoo>
