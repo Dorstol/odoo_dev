@@ -9,8 +9,13 @@ class Diagnosis(models.Model):
         "hr.patient.visit",
         required=True,
     )
-    diagnose = fields.Char(
+    disease_id = fields.Many2one(
+        "hr.disease",
         required=True,
+    )
+    disease_name = fields.Char(
+        related="disease_id.name",
+        store=True,
     )
     description = fields.Text()
     approved = fields.Boolean(
